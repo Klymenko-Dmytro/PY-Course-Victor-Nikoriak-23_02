@@ -112,8 +112,6 @@ git config --global user.email "your_email@example.com"
 
 ---
 
----
-
 # 🧭 Як ми працюємо
 
 * **`main`** — це матеріали курсу (оновлюються викладачем)
