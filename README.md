@@ -1,4 +1,4 @@
-# 🐍 Python Programming Bootcamp
+# 🐍 Python Programming 
 
 Beetroot Academy  
 Spring 2026
