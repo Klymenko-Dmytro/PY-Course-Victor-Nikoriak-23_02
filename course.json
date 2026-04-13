@@ -24,6 +24,13 @@
       "title": "Module 2 — Python Intermediate",
       "path": "module_2/lessons",
       "lessons": [13, 14, 15]
+    },
+    {
+      "number": 3,
+      "slug": "python-advanced",
+      "title": "Module 3 — Python Advanced",
+      "path": "module_3/lessons",
+      "lessons": [22]
     }
   ]
 }

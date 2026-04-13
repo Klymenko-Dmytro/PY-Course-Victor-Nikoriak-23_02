@@ -205,8 +205,11 @@ sequenceDiagram
 
 ## 12 · Як запустити
 
+
 ```bash
-cd ecommerce_analytics/
+cd module_2/lessons/lesson_21_module2_review/ecommerce_analytics
+
+
 streamlit run app.py
 ```
 
