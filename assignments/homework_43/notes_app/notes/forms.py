@@ -18,8 +18,9 @@ class NoteForm(forms.ModelForm):
 
         # Підключаємо HTML-віджети, щоб форма виглядала акуратно
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-input', 'placeholder': 'Введіть заголовок...'}),
-            'text': forms.Textarea(attrs={'class': 'form-textarea', 'placeholder': 'Напишіть щось...', 'rows': 4}),
-            'reminder': forms.DateTimeInput(attrs={'class': 'form-input', 'type': 'datetime-local'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введіть заголовок...'}),
+            'text': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Напишіть щось...', 'rows': 3}),
+            'reminder': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}),
             'category': forms.Select(attrs={'class': 'form-select'}),
         }
+
