@@ -136,3 +136,8 @@ STATIC_URL = "static/"
 
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Куди перенаправляти після успішного входу
+LOGIN_REDIRECT_URL = 'notes_home'
+# Куди перенаправляти після виходу з системи
+LOGOUT_REDIRECT_URL = 'login'

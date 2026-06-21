@@ -15,25 +15,34 @@
 <!-- Оновлена навігаційна панель з посиланнями -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 shadow">
     <div class="container">
-        <!-- Логотип / Посилання на головну сторінку -->
         <a class="navbar-brand fw-bold text-success" href="{% url 'notes_home' %}">📝 NotesApp</a>
 
-        <!-- Кнопка для мобільних пристроїв (гамбургер-меню) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Меню навігації -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-collapse navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <!-- Посилання на головну сторінку -->
-                    <a class="nav-link active" aria-current="page" href="{% url 'notes_home' %}">Головна сторінка</a>
+            <!-- Оновлений список елементів меню (ms-auto посуває його праворуч) -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <!-- Привітання користувача -->
+                <li class="nav-item text-light me-3">
+                    👋 Привіт, <strong class="text-success">{{ user.username }}</strong>
                 </li>
-                <li class="nav-item ms-lg-3">
-                    <!-- Посилання (якір) на форму створення нотатки -->
+                <!-- Посилання на головну -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'notes_home' %}">Головна</a>
+                </li>
+                <!-- Кнопка створення нотатки -->
+                <li class="nav-item ms-lg-2">
                     <a class="btn btn-success btn-sm text-white px-3" href="#create-note-form">➕ Створити нотатку</a>
+                </li>
+                <!-- КНОПКА LOG OUT (Вихід через POST-форму для Django 5+) -->
+                <li class="nav-item ms-lg-3">
+                    <form method="POST" action="{% url 'logout' %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-light btn-sm">Вийти 🚪</button>
+                    </form>
                 </li>
             </ul>
         </div>
